@@ -1,23 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-
-// function useKey(key, cb) {
-//     const callbackRef = useRef(cb);
-
-//     useEffect(() => {
-//         callbackRef.current = cb;
-//     });
-//     useEffect(() => {
-//         function handle(event) {
-//             if (event.code === key) {
-//                 callbackRef.current(event);
-//             }
-//         }
-//         document.addEventListener("keypress", handle);
-//         return () => document.removeEventListener("keypress", handle);
-//     }, [key]);
-
-// }
-
+import { useEffect, useState } from "react";
 
 const Game = () => {
     function Press() {
@@ -85,7 +66,7 @@ const Game = () => {
                             setK25(event.key);
                     }
                 }
-                if (event.key == ' ') { 
+                if (event.key == ' ') {
                     if (i == 1) {
                         if (K != '' && K2 == '')
                             setK('');
@@ -145,6 +126,46 @@ const Game = () => {
                             setK24('');
                         else if (K25 != '')
                             setK25('');
+                    }
+                }
+                if (event.key == 'Enter')
+                {
+                    if(i == 1 && K5 != '')
+                        seti(2);
+                    if(i == 2 && K10 != '')
+                        seti(3);
+                    if(i == 3 && K15 != '')
+                        seti(4);
+                    if(i == 4 && K20 != '')
+                        seti(5);
+                    if(K25 != '')
+                    {
+                        seti(1);
+                        setK('');
+                        setK2('');
+                        setK3('');
+                        setK4('');
+                        setK5('');
+                        setK6('');
+                        setK7('');
+                        setK8('');
+                        setK9('');
+                        setK10('');
+                        setK11('');
+                        setK12('');
+                        setK13('');
+                        setK14('');
+                        setK15('');
+                        setK16('');
+                        setK17('');
+                        setK18('');
+                        setK19('');
+                        setK20('');
+                        setK21('');
+                        setK22('');
+                        setK23('');
+                        setK24('');
+                        setK25('');
                     }
                 }
             }
