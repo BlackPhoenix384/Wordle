@@ -70,7 +70,7 @@ const Game = () => {
                         }
                     }
                 }
-                if (event.key == ' ') {
+                if (event.keyCode == 8) {
                     if (i == 1) {
                         if (K != '' && K2 == '')
                             setK('');
@@ -171,8 +171,8 @@ const Game = () => {
                     }
                 }
             }
-            document.addEventListener("keypress", handle);
-            return () => document.removeEventListener("keypress", handle);
+            document.addEventListener("keydown", handle);
+            return () => document.removeEventListener("keydown", handle);
         });
     }
     const [win, setwin] = useState(true);
