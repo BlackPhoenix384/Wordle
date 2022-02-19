@@ -1,69 +1,73 @@
 import { useEffect, useState } from "react";
 
 const Game = () => {
+    const str = ['A', 'B' ,'C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
     function Press() {
         useEffect(() => {
             function handle(event) {
-                if (event.key != ' ' && event.key != 'Enter') {
-                    if (i == 1) {
-                        if (K == '')
-                            setK(event.key);
-                        if (K2 == '' && K != '')
-                            setK2(event.key);
-                        if (K3 == '' && K2 != '')
-                            setK3(event.key);
-                        if (K4 == '' && K3 != '')
-                            setK4(event.key);
-                        if (K5 == '' && K4 != '')
-                            setK5(event.key);
-                    }
-                    if (i == 2) {
-                        if (K6 == '')
-                            setK6(event.key);
-                        if (K7 == '' && K6 != '')
-                            setK7(event.key);
-                        if (K8 == '' && K7 != '')
-                            setK8(event.key);
-                        if (K9 == '' && K8 != '')
-                            setK9(event.key);
-                        if (K10 == '' && K9 != '')
-                            setK10(event.key);
-                    }
-                    if (i == 3) {
-                        if (K11 == '')
-                            setK11(event.key);
-                        if (K12 == '' && K11 != '')
-                            setK12(event.key);
-                        if (K13 == '' && K12 != '')
-                            setK13(event.key);
-                        if (K14 == '' && K13 != '')
-                            setK14(event.key);
-                        if (K15 == '' && K14 != '')
-                            setK15(event.key);
-                    }
-                    if (i == 4) {
-                        if (K16 == '')
-                            setK16(event.key);
-                        if (K17 == '' && K16 != '')
-                            setK17(event.key);
-                        if (K18 == '' && K17 != '')
-                            setK18(event.key);
-                        if (K19 == '' && K18 != '')
-                            setK19(event.key);
-                        if (K20 == '' && K19 != '')
-                            setK20(event.key);
-                    }
-                    if (i == 5) {
-                        if (K21 == '')
-                            setK21(event.key);
-                        if (K22 == '' && K21 != '')
-                            setK22(event.key);
-                        if (K23 == '' && K22 != '')
-                            setK23(event.key);
-                        if (K24 == '' && K23 != '')
-                            setK24(event.key);
-                        if (K25 == '' && K24 != '')
-                            setK25(event.key);
+                str.forEach(check);
+                function check(items) {
+                    if (event.key == items) {
+                        if (i == 1) {
+                            if (K == '')
+                                setK(event.key);
+                            if (K2 == '' && K != '')
+                                setK2(event.key);
+                            if (K3 == '' && K2 != '')
+                                setK3(event.key);
+                            if (K4 == '' && K3 != '')
+                                setK4(event.key);
+                            if (K5 == '' && K4 != '')
+                                setK5(event.key);
+                        }
+                        if (i == 2) {
+                            if (K6 == '')
+                                setK6(event.key);
+                            if (K7 == '' && K6 != '')
+                                setK7(event.key);
+                            if (K8 == '' && K7 != '')
+                                setK8(event.key);
+                            if (K9 == '' && K8 != '')
+                                setK9(event.key);
+                            if (K10 == '' && K9 != '')
+                                setK10(event.key);
+                        }
+                        if (i == 3) {
+                            if (K11 == '')
+                                setK11(event.key);
+                            if (K12 == '' && K11 != '')
+                                setK12(event.key);
+                            if (K13 == '' && K12 != '')
+                                setK13(event.key);
+                            if (K14 == '' && K13 != '')
+                                setK14(event.key);
+                            if (K15 == '' && K14 != '')
+                                setK15(event.key);
+                        }
+                        if (i == 4) {
+                            if (K16 == '')
+                                setK16(event.key);
+                            if (K17 == '' && K16 != '')
+                                setK17(event.key);
+                            if (K18 == '' && K17 != '')
+                                setK18(event.key);
+                            if (K19 == '' && K18 != '')
+                                setK19(event.key);
+                            if (K20 == '' && K19 != '')
+                                setK20(event.key);
+                        }
+                        if (i == 5) {
+                            if (K21 == '')
+                                setK21(event.key);
+                            if (K22 == '' && K21 != '')
+                                setK22(event.key);
+                            if (K23 == '' && K22 != '')
+                                setK23(event.key);
+                            if (K24 == '' && K23 != '')
+                                setK24(event.key);
+                            if (K25 == '' && K24 != '')
+                                setK25(event.key);
+                        }
                     }
                 }
                 if (event.key == ' ') {
@@ -128,18 +132,16 @@ const Game = () => {
                             setK25('');
                     }
                 }
-                if (event.key == 'Enter')
-                {
-                    if(i == 1 && K5 != '')
+                if (event.key == 'Enter') {
+                    if (i == 1 && K5 != '')
                         seti(2);
-                    if(i == 2 && K10 != '')
+                    if (i == 2 && K10 != '')
                         seti(3);
-                    if(i == 3 && K15 != '')
+                    if (i == 3 && K15 != '')
                         seti(4);
-                    if(i == 4 && K20 != '')
+                    if (i == 4 && K20 != '')
                         seti(5);
-                    if(K25 != '')
-                    {
+                    if (K25 != '') {
                         seti(1);
                         setK('');
                         setK2('');
